@@ -1,0 +1,14 @@
+<div class="row justify-content-center">
+  @for (item of personajes; track $index) {
+  <div class="col-10 col-sm-6 col-md-4 col-lg-3 col-xl-2 mt-3">
+    <div class="card">
+      <img src="{{item.image}}" class="card-img-top" alt="...">
+      <div class="card-body d-flex flex-column align-items-center">
+        <h5 class="card-title">{{item.name}}</h5>
+        <button [routerLink]="['/character', item.id]" type="button" class="btn btn-warning">See more</button>
+      </div>
+    </div>
+  </div>
+  }
+
+</div>
